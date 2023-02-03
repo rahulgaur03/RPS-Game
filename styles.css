@@ -2,11 +2,13 @@
     display: flex;
     width: 100%;
     margin: 0 auto;
+    border: solid black;
   }
   
   .headline-container {
     width: 60%;
     padding-right: 20px;
+    border: solid rgb(189, 32, 32);
   }
   
   
@@ -14,5 +16,20 @@
     text-align: center;
     width: 20%;
     padding-right: 20px;
+    border: solid rgb(75, 208, 14);
   }
-  
+
+  .prompt{
+    text-align: center;
+    border: solid rgb(92, 63, 206);
+  }
+  .game-container {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    border: solid rgb(215, 241, 67);
+  }
+  .player{
+    width: 50%;
+    border: solid rgb(14, 98, 208);
+  }
