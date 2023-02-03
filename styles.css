@@ -1,43 +1,18 @@
-.head {
-    display: inline-block;
-    width: 55%;
-    border: solid rgb(0, 0, 0);
-    
+.main-container {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
   }
-  .result {
+  
+  .headline-container {
+    width: 60%;
+    padding-right: 20px;
+  }
+  
+  
+  .info-box {
     text-align: center;
-    display: inline-block;
     width: 20%;
-    border: solid rgb(0, 0, 0);
-
+    padding-right: 20px;
   }
-  .prompt{
-    text-align: center;
-  }
-  .game{
-    display: inline-block;
-    width: 49%;
-    border: solid rgb(0, 0, 0);
-
-  }
-  .computer{
-    display: inline-block;
-    border: solid rgb(0, 0, 0);
-    float: left;
-  }
-  .user{
-    display: inline-block;
-    border: solid rgb(0, 0, 0);
-    float: right;
-  }
-  .computerchoice{
-    margin-top: 10px;
-    border: solid rgb(0, 0, 0);
-    float: right;
-  }
-  .userchoice{
-    margin-top: 10px;
-    border: solid rgb(0, 0, 0);
-    float: left;
-  }
- 
+  
