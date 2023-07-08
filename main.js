@@ -1,63 +1,32 @@
-// Function to play the game
-const playGame = (userChoice) => {
-    const computerChoice = Math.random();
-    console.log(computerChoice);
-    let choice;
-  
-    if (computerChoice < 0.34) {
-      choice = "rock";
-    } else if (computerChoice <= 0.67) {
-      choice = "paper";
-    } else {
-      choice = "scissors";
-    }
-  
-    // Determine the winner
-    const determineWinner = (userChoice, computerChoice) => {
-      if (userChoice === computerChoice) {
-        return "The game is a tie!";
-      }
-  
-      if (userChoice === "rock") {
-        if (computerChoice === "scissors") {
-          return "You win!";
-        } else {
-          return "You lose. Try again.";
-        }
-      }
-  
-      if (userChoice === "paper") {
-        if (computerChoice === "rock") {
-          return "You win!";
-        } else {
-          return "You lose. Try again.";
-        }
-      }
-  
-      if (userChoice === "scissors") {
-        if (computerChoice === "paper") {
-          return "You win!";
-        } else {
-          return "You lose. Try again.";
-        }
-      }
-    };
-  
-    // Display the result
-    const result = determineWinner(userChoice, choice);
-    document.getElementById("result").innerHTML = `You chose ${userChoice}, the computer chose ${choice}. ${result}`;
-  };
-  
-  // Event listeners for buttons
-  document.getElementById("rock").addEventListener("click", () => {
-    playGame("rock");
-  });
-  
-  document.getElementById("paper").addEventListener("click", () => {
-    playGame("paper");
-  });
-  
-  document.getElementById("scissors").addEventListener("click", () => {
-    playGame("scissors");
-  });
-  
+const determineWinner = (userChoice, computerChoice) => {
+  if (userChoice === computerChoice) {
+    return 0;
+  }
+  if (
+    (userChoice === "rock" && computerChoice === "scissor") ||
+    (userChoice === "paper" && computerChoice === "rock") ||
+    (userChoice === "scissor" && computerChoice === "paper")
+  ) {
+    return 1;
+  }
+  return 2;
+};
+
+const userChoice = (uChoice) => {
+  const choices = ["rock", "paper", "scissor"];
+  const cChoice = choices[Math.floor(Math.random() * choices.length)];
+  document.getElementById("addUserChoice").src = `static/${uChoice}.jpg`;
+  document.getElementById("addComputerChoice").src = `static/${cChoice}.jpg`;
+
+  const result = determineWinner(uChoice, cChoice);
+  const showResult = document.getElementById("showResult");
+  const scoreElement = result === 1 ? document.getElementById("uScore") : document.getElementById("cScore");
+  const score = parseInt(scoreElement.innerText);
+
+  if (result === 0) {
+    showResult.innerText = "The game is a tie!";
+  } else {
+    showResult.innerText = result === 1 ? "You win!" : "You lose. Try again.";
+    scoreElement.innerText = score + 1;
+  }
+};

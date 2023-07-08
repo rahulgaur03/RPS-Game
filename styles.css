@@ -24,29 +24,28 @@
   border: solid rgb(92, 63, 206);
 }
 
-.game-container {
-  display: flex;
-  width: 100%;
-  margin: 0 auto;
-  border: solid rgb(215, 241, 67);
-}
+.game{
+  display: inline-block;
+  width: 49%;
+  border: solid rgb(193, 23, 23);
 
-.player {
-  display: flex;
-  width: 50%;
-  border: solid rgb(14, 98, 208);
 }
-
-.choice {
-  width: 25%;
-  border: solid rgb(221, 60, 15);
+.playername{
+  text-align: center;
+  border: solid rgb(193, 23, 23);
 }
-
-.option {
-  flex-direction: column;
-  width: 25%;
-  border: solid rgb(221, 60, 15);
+.computeroption,.userchoice,.useroption,.computerchoice{
+  text-align: center;
+  display: inline-block;
+  border: solid rgb(0, 0, 0);
+  width: 48%;
+  list-style: none;
 }
-.cmp, .pl{
-margin-left: 50%;
+ul{
+  text-align: center;
+  list-style: none;
+}
+.choice{
+  padding-top:30%;
+  padding-bottom: 30%;
 }

@@ -16,17 +16,47 @@
             <p> Battle of Human Vs. Computer.</p>
         </div>
         <div class="info-box">
-            <h2>Computer <span>0</span></h2>
-            <img src="static/user.png" alt="Computer" width="100px">
+            <h2>Computer <span id ='cScore'>0</span></h2>
+            <img src="static/computer.jpg" alt="Computer" width="100px">
         </div>
         <div class="info-box">
-            <h2>User <span>0</span></h2>
-            <img src="static/user.png" alt="Computer" width="100px">
+            <h2>User <span id ='uScore'>0</span></h2>
+            <img src="static/user.png" alt="User" width="100px">
         </div>
     </div>
     <div class="prompt">
-        <h1>You Win !!!</h1>
+        <h1 id="showResult">You Win !!!</h1>
     </div>
+    <div class="game">
+        <h1 class="playername">Computer</h1>
+        <div class="computeroption">
+            <ul>
+                <li><img class="selection" id="rock" src="static/rock.jpg" width = "100px" alt=""></li>
+                <li><img class="selection" id="paper" src="static/paper.jpg" width = "100px" alt=""></li>
+                <li><img class="selection" id="scissor" src="static/scissor.jpg" width = "100px" alt=""></li>
+            </ul>
+        </div>
+        <div class = "computerchoice">
+            <img class="choice" id ="addComputerChoice" src="static/computer.jpg" width = "100px" alt="">
+        </div>
+    </div>
+    <div class="game">
+        <h1 class="playername">User</h1>
+        <div class = "userchoice">
+            <img class="choice" id ="addUserChoice" src="static/user.png" width = "100px" alt="Select Image">
+        </div>
+        <div class="useroption">
+            <ul>
+                <li><img class="selection" id="rock" src="static/rock.jpg" width = "100px" alt="" onclick="userChoice('rock')"></li>
+                <li><img class="selection" id="paper" src="static/paper.jpg" width = "100px" alt="" onclick="userChoice('paper')"></li>
+                <li><img class="selection" id="scissor" src="static/scissor.jpg" width = "100px" alt="" onclick="userChoice('scissor')"></li>
+            </ul>
+        </div>
+    
+    </div>
+
+
+    <script src="main.js"></script>
 </body>
 
 </html>
